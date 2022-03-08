@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Project using OOPS</title>
+</head>
+<style>
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        border: 1px solid black;
+        background-color: white;
+        box-shadow: 5px 5px black;
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>Modal project</h1>
+    <button class="js-open-btn" style="padding: 20px 40px;">Open Modal</button>
+
+    <div class="modal">
+        <h1>This is a Modal</h1>
+        <p class="modal-text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem facere quo nesciunt, nihil iusto
+            repellendus, libero odio, aliquam asperiores corrupti provident veritatis. A, voluptates, pariatur
+            distinctio debitis, iure officiis earum eius quibusdam aliquam qui fugit consequuntur vel labore natus eos
+            possimus temporibus sunt quaerat est eligendi quae esse voluptas ipsam.
+        </p>
+
+        <p>
+            <button class="change">Change Text</button>
+        </p>
+
+        <p>
+            <button class="js-close-btn">Close Modal</button>
+        </p>
+    </div>
+
+    <script>
+
+        class Modal {
+            constructor(title, text) {
+                this.modal = document.querySelector(".modal");
+                this.title = title;
+                this.text = text;
+            }
+
+            open() {
+                this.modal.style.display = 'initial';
+            }
+
+            close() {
+                this.modal.style.display = 'none';
+            }
+
+            change() {
+                if (this.title != "undefined") {
+                    this.modal.querySelector("h1").innerText = this.title;
+                }
+
+                if (this.text != "undefined") {
+                    this.modal.querySelector(".modal-text").innerText = this.text;
+                }
+            }
+        }
+
+        const obtn = document.querySelector(".js-open-btn");
+        const cbtn = document.querySelector(".js-close-btn");
+        const chbtn = document.querySelector(".change");
+
+        const modal = new Modal("Hello", "My name is Vaibhav");
+        obtn.addEventListener('click', function (event) {
+            modal.open();
+        });
+
+        cbtn.addEventListener('click', function (event) {
+            modal.close();
+        });
+
+        chbtn.addEventListener('click', function (event) {
+            modal.change();
+        });
+    </script>
+</body>
+</html>

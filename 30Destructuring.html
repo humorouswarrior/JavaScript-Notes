@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+            //yahan harr jagah let ki jagah const bhi aa skta h. var bhi
+
+        var arr = ["Nikita", "Ankita", "Vaibhav"];
+        // var nikita = arr[0];
+        // var ankita = arr[1];
+
+        let [nikita, ankita, vaibhav] = arr;
+        console.log(nikita);
+        console.log(ankita);
+        console.log(vaibhav);
+
+
+        var fullname = prompt("What is your Fullname?");
+        let [firstname, lastname] = fullname.split(' ');
+        console.log(firstname);
+        console.log(lastname);
+
+        var array = ["Zephyr", "henry", "kalob", "maya", "praire"];
+        let [one, two, ...rest] = array; // this rest can be called anything else also. The names can be anything.
+        console.log(one);
+        console.log(two);
+        console.log(rest);
+
+
+        ///destructuring object is a little different. isme order me nahi ayega sab, variable names should be same. 
+        const person = {
+            'name': 'vaibhav',
+            'age': 19,
+            'cats': 2,
+            'food': 'Chhole Bhature'
+        }
+
+        let { name, food, ...brr } = person    ///braces change. 
+        console.log(`Name is ${name}`);
+        console.log(`Food is ${food}`);
+        console.log(brr);
+
+    </script>
+</body>
+</html>

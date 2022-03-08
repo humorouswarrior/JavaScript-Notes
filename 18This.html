@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"This" keyword</title>
+</head>
+<body>
+    
+    <script>
+        //this is always referring to a function( may or may not have parameters ) or an object. It is referencing whatever is inside of its brackets. 'this' just means itself.
+        function getperson(name) {
+                this.name = name;
+                this.profession = "Teacher and dev";
+                return this;
+            }
+            var kalob = getperson("kalob");
+            console.log(kalob.name);
+            console.log(kalob.profession);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+
+    <script>
+
+        var num = 30;
+        console.log("Num is : ", typeof(num));
+        var array = ["brr", "hemlu" ,"boorgir"];
+        console.log("Array is : ", typeof(array));   //console.log me object batayega. coz javascript is an object oriented programming language and objects me bhi vaise hi data jaati hai jaise arrays me
+        var string = "Hellu my name is vuvuv";
+        console.log("String is : ", typeof(string));
+        var boolean = true;
+        console.log("Boolean is : ", typeof(boolean));
+
+
+        //Variable Casting or Type Casting 
+        //In javascript, decimal/float/integer are all equal to number
+        var num = 30;
+        num = String(num);
+        console.log("Num is : ", typeof(num));
+        
+        var array = ["brr", "hemlu" ,"boorgir"];
+        array=Number(array)
+        console.log("Array is : ", typeof(array));  
+        
+        var string = "Hellu my name is vuvuv";
+        console.log("String is : ", typeof(string));
+        string=Array(string);
+        
+        var boolean = "true";
+        boolean=Boolean(true);
+        console.log("Boolean is : ", typeof(boolean));
+
+        //A new operator
+        var age = "30";
+        // if(age==30)
+        // {
+        //     console.log("you are 30");
+        // }
+        if(age===30)
+        {
+            console.log("you are 30");
+        }
+        else{
+            console.warn("wrong data type");
+        }
+    </script>
+
+</body>
+</html>

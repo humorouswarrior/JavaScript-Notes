@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    
+    <h1>Guessing Game!!!!</h1>
+
+    <input type="text" id ="js-input" style="border: 5px solid brown; padding: 30px 20px; font-size: 30px; color: blue;">
+
+    <h2 id ="js-head">You're in the loop!!!!</h2>
+
+    <script>
+
+//Its correct but ram gets filled up and the program shuts off for some reason. But if we do it with prompts and alerts instead of input box and event listeners, it works okay. You tried different. Gib pat on back hehe.
+
+        var head = document.getElementById("js-head");
+        var input = document.getElementById("js-input");
+        input.addEventListener('keyup', function (event) {
+            var inp = event.target.value;
+            inp = Number(inp);
+            var flag = 1
+            while (true) {
+                if (inp == 1) {
+                    head.innerText = "OUT OF THE LOOP";
+                    break;
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>

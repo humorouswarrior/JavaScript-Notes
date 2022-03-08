@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeouts and Intervals</title>
+</head>
+<body>
+    <script>
+        console.log("First consolelog");               //timeouts basically set a timer to delay a piece of code
+        function yo() {
+            console.log("Second console log: YOOOO");
+            const body = document.querySelector("body");
+            body.style.backgroundColor = "red";
+        }
+        setTimeout(yo, 7000);      //time is in milliseconds, therefore thats 3 seconds
+        console.log("last consolelog");
+
+
+
+//intervals
+
+        var logger = setInterval(function(){
+            console.log("I'm running");
+        }, 1000)
+
+        setTimeout(function(){
+            clearInterval(logger)
+        }, 5000)
+
+    </script>
+</body>
+</html>

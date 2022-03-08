@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProject2</title>
+</head>
+
+<body>
+
+    This is the link : 
+    <h1 id="link"></h1>
+
+
+
+
+
+    <script>
+        
+        var pro = prompt("Enter the URL");
+            if (pro == null) {
+                alert("YOU CANCELLED"); //console.error("missing input");
+            }
+            else {
+                if (pro.substr(0, 8) != "https://") {
+                    pro = "https://" + pro;
+                }
+                var linkNode = document.getElementById("link");
+                linkNode.innerHTML = "<a href='" + pro + "'>" + pro + "</a>";   //imp line hai. Learn.
+            }
+
+    </script>
+</body>
+</html>

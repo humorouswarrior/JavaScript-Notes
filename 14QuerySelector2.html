@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector2</title>
+</head>
+<body>
+
+    <ul>
+        <li>Number 0</li>
+        <li>Number 1</li>
+        <li>Number 2</li>
+        <li>Number 3</li>
+        <li>Number 4</li>
+        <li>Number 5</li>
+        <li>Number 6</li>
+    </ul>
+
+    
+    <input type="text" style = "padding: 20px; font-size: 20px;" class= "form-control" value="hello world">  
+<!-- the class form-control is from bootstrap. its not being used here -->
+
+
+
+    <script>
+       var lis = document.querySelectorAll("li");       
+       //console.log(typeof(lis));  //an object or a NodeList(type lis on console)
+        lis[0].innerText = "hehehehe";
+        lis[5].innerHTML = "<a href='#'>hihihihihih</a>";
+    
+        var input = document.querySelector(".form-control");
+        console.log(input.value);
+    
+    </script>
+
+
+</body>
+</html>

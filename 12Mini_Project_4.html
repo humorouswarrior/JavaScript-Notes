@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniProject4</title>
+</head>
+<body>
+
+    <h1>TIP CALCULATOR</h1>
+    <h2 id="total"></h2>
+
+    <script>
+        function tip(bill, t=10) {
+            return bill + (t / 100) * bill;
+        }
+        function $(id) {
+            return document.getElementById(id);
+        }
+        var TotalBill = tip(1000, 10);
+        var tot = $("total");
+        tot.innerText = TotalBill; 
+    </script>
+
+</body>
+</html>

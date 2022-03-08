@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous funtions and IIFE</title>
+</head>
+<body>
+    
+    <input type="text" style="width: 50px; padding: 10px 5px; border: aqua solid; border-radius: 10px; color: blue; font-size: 2rem">
+
+    <script>
+        
+        //Anonymous func (function with no name), is stored in a variable. The typeof("Variable") = function. Used for functions that only need to run once.
+        //IIFE = Immediately invoked function expression. A function that runs right away. As soon as you load the page
+        
+        //This is an IIFE with an anonymous function. A function is made to be an IIFE with parentheses around it and a pair after it, with a semi colon at the end. 
+
+        var getName = (function(){
+            return document.querySelector("input").value;
+        })();
+        //Write this in console
+        //console.log("Hi my name is " + getName());
+
+
+        //This is an IIFE with a normal function.
+
+        (function loadApp (){
+            console.log("App is loading");
+            //......
+            console.log("App is loaded");
+        })();
+
+    </script>
+
+
+</body>
+</html>

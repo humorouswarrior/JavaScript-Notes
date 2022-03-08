@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    
+    <h1>Lists : </h1>
+    <ul class="js-class"></ul>
+
+    <script>
+
+        function change(name){
+            return name.toLowerCase() + "@gmail.com";
+        }
+        var names = ["Vaibhav", "Ankita", "Nikita"];
+
+//For loop ekdum C++/java jaisa       
+        for(var i = 0; i<names.length; i++)
+        {
+            //var email = names[i].toLowerCase() + "@gmail.com";
+            var email = change(names[i]);
+            console.log(email);
+            console.log(names[i]);
+        }
+
+// While loop bhi c++ wale jaisa hi hai. 
+
+        var ul = document.querySelector(".js-class");
+        var html = '';
+        var num = Number(prompt("Give me a number : "));
+        var startingNum = 1;
+        while(startingNum<=num)
+        {
+            html = html + "<li>" + startingNum + "</li>";
+            startingNum++;
+        }
+        ul.innerHTML = html;
+
+//For-Each loop java me padha h but yahan thoda alag hai 
+var subjects = ["java","os","mats","am4","sans","toc","bs"];
+subjects.forEach(function(sub, index){
+    if(index >= 3)
+    {
+        sub.remove;
+        return;
+    }
+    console.log(index, sub);
+});
+
+</script>
+    
+</body>
+</html>

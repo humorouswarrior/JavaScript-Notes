@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+
+    <h1 id="title"></h1>
+
+    <script>
+
+        function greetings(name = "Zephyr", age = 4) {
+            console.log("Hello " + name);
+            console.log("Age is " + age);
+
+            return name;
+        }                                               
+
+        var DefaultName = greetings();
+        var Name1 = greetings("Kalob", 30);
+        var Name2 = greetings("Henry", 2);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function doMath(num) {
+            num = Number(num);
+            //console.log(typeof(num));
+            if (num) {
+                //is a real number
+                var newnum = (num + 100) / 3;
+                return newnum;
+            }
+            else {
+                return false;
+            }
+        }
+
+        var number = doMath("kalob");
+        console.log(number);
+        var number = doMath("43");
+        console.log(number);
+        var number = doMath("67");
+        console.log(number);
+        var number = doMath("56765");
+        console.log(number);
+        var number = doMath("234");
+        console.log(number);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function $(id) {
+                console.log("Id is : ", id)
+                return document.getElementById(id);
+            }
+
+            var title = $("title");
+            title.innerText = "CUSTOM INNER TEXT";
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        function CtoF(Cnum) {
+                return (Cnum * 1.8) + 32;
+            }
+
+            var zero = CtoF(0); console.log("Fahrenheit is : ", zero);
+            var twenty = CtoF(20); console.log("Fahrenheit is : ", twenty);
+            var boiling = CtoF(100); console.log("Fahrenheit is : ", boiling);
+            var freezing = CtoF(-40); console.log("Fahrenheit is : ", freezing);
+    
+    </script>
+
+</body>
+</html>

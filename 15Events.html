@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+
+    <h1>Events</h1>
+    <!-- this is a click event -->
+    <button style="padding: 10px 30px;" onclick="clickme()">Go</button>
+    <!-- adding line breaks -->
+    <br>
+    <br>
+    <br>
+    <!-- this will be a basic calculator event -->
+    <input type="text" style="padding: 30px 20px; border: solid blue 2px; font-size: 1rem; color: red;">
+    <br>
+    <br>
+    <button style="padding: 10px 30px;" onclick="calculate()">Add 100</button>
+    <h1>The total is: <span style="color: brown; font-weight: bold; font-size: larger;">N/A</span></h1>
+    
+    <script>
+        //click event code
+        var totalClicks = 0;
+        function clickme() {
+            totalClicks++;  //or totalClicks = totalClicks+1
+            console.log("You've clicked this button " + totalClicks + " times.");
+            console.log("click");
+        }
+
+        //basic calculator code
+        var num = 100;
+        function calculate() {
+            var input = document.querySelector("input");
+            var value = Number(input.value);
+            var totalValue = value + num;
+
+            var h1 = document.querySelectorAll("h1")[1];     // there are 2 h1s and we need the second one, which is at index 1 in the nodelist
+            var span = h1.querySelector("span");
+            span.innerText = totalValue;
+        }
+    </script>
+</body>
+</html>

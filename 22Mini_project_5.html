@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project 5</title>
+</head>
+<body>
+
+    <h1>Change stuff with Event Listeners</h1>
+    
+    <div>
+        <label for=".js-input1">Text Colour : </label>
+        <input type="text" class="js-input1" style="padding: 60px 40px; border: solid 3px red; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">
+    </div>
+    <br>
+
+    <div>
+        <label for=".js-input2">Bg Colour : </label>
+        <input type="text" class="js-input2" style="padding: 60px 40px; border: solid 3px blue; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">
+    </div>
+    <br>
+    
+    <div>
+        <label for=".js-input3">Font Size : </label>
+        <input type="text" class="js-input3" style="padding: 60px 40px; border: solid 3px green; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">
+    </div>
+    
+    <script>
+
+        var body = document.querySelector("body");
+
+        var input1 = document.querySelector(".js-input1");
+        input1.addEventListener('keyup', function (event) {
+            var colour = event.target.value;
+            body.style.color = colour;
+        });
+
+        var input2 = document.querySelector(".js-input2");
+        input2.addEventListener('keyup', function (event) {
+            var colour = event.target.value;
+            body.style.backgroundColor = colour;
+        });
+
+        var input3 = document.querySelector(".js-input3");
+        input3.addEventListener('keyup', function(event){
+            var font = event.target.value;
+            body.style.fontSize = font;
+        });
+
+
+    </script>
+
+
+</body>
+</html>

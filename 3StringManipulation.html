@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">      //Write all the code down by hand pls to create muscle mem for javascript
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+
+<body>
+
+
+    <h1 id="sentence"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae cum aspernatur inventore assumenda
+        voluptate veritatis nobis earum aut accusantium aliquid eveniet consequuntur eligendi tenetur facilis incidunt,
+        quisquam est sequi doloribus quod quos illo error consectetur itaque nemo. Accusamus rem quidem enim tempora hic
+        possimus earum officia cumque itaque. Reprehenderit, maiores?</h1>
+
+
+
+    <script>
+
+        var sentenceNode = document.getElementById("sentence");
+        var sentence = sentenceNode.innerText;
+        //console.log(sentence);
+
+        var upperSentence = sentence.toUpperCase();
+        var lowerSentence = sentence.toLowerCase();
+
+        var firstTenChars = sentence.substr(0, 10); //first 10 characters
+
+        var allWords = sentence.split(" "); //typeof(allWords) = Array)
+        //console.log(allWords);
+
+        var bracketWords = "(" + allWords.join(")(") + ")";
+        //sentenceNode.innerText = bracketWords;
+
+        var a = allWords;
+
+        var firstThreeWords = allWords.slice(0, 3); //first 3 words. if we write (3) in brackets it will skip first 3 and give all the words after
+
+        var middleWords = allWords.slice(5, 10);
+        var makeSentence = middleWords.join(" ");
+        sentenceNode.innerText = makeSentence;
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector1</title>
+</head>
+<body>
+    
+    <small>brrrrrrrrrrrrrrbrrrrrrrrrrrrrr</small>
+    <h1 class="title">
+        hihihihihihihihi
+        <small>idiue2bfiebfei</small>
+    </h1>
+
+    <a href="#">brr.com</a>
+    <script>
+
+        var title = document.querySelector(".title"); //will select first thing it finds in the document with class title 
+        //title.innerText = "Changed using a class"; 
+        var small = document.querySelector("small"); //will select first thing it finds in the document with element small
+        small.innerText = "changed using only name of element";
+
+        var small2 = title.querySelector("small"); //will select first thing it finds INSIDE title class wala element with element small
+        small2.innerText = "wowowow"; 
+
+        var a = document.querySelector("a");
+        a.innerHTML = "ayo.com"; 
+    </script>
+
+
+</body>
+</html>

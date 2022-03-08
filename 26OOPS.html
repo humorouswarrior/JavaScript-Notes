@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+
+<body>                                                                            
+    <script>
+        class hello {
+
+            constructor(name, age, food) {
+                this.name = name;
+                this.age = Number(age);
+                this.food = food;                                   ///read about const and let type variables if confused
+            }
+
+            makesound() {
+                console.log(this.name + " aged " + this.age + " says mmmm to " + this.food);
+            }
+
+        }
+
+        const vaibhav = new hello("Vaibhav", 19, "Chhole Bhature");
+        const bhupinder = new hello("Bhuppi", 69, "yo mamma");
+        vaibhav.makesound();
+        bhupinder.makesound();
+
+
+        ///INHERITANCE
+
+        class animal {
+            constructor(species, weight, height) {
+                this.species = species;
+                this.weight = weight;
+                this.height = height;
+            }
+
+
+            speak() {
+                console.log("I say something");
+            }
+        }
+
+        class cat extends animal {
+            constructor(species, weight, height, colour) {
+                super(species, weight, height)
+                this.colour = colour;
+            }
+
+
+            sleep() {
+                console.log(this.species + " is having a nap");
+                return this;
+            }
+
+            speak() {                               ///function overriding
+                console.log("meowwwww");
+                return this;
+            }
+        }
+
+        const zephyr = new cat("cat", 13, 30, "grey");
+        zephyr.sleep().speak().sleep();
+
+    </script>
+</body>
+
+</html>
