@@ -37,7 +37,7 @@
 
         let html = "";
 
-        letters.forEach(letter => {                          //arrow function
+        letters.forEach(letter => {                    //arrow function   // may or may not use parentheses around letter as we dont NEED them in case of only a single parameter
             let classes = '';
             if (letter != " ") {
                 classes = "letter js-letter";
@@ -47,7 +47,7 @@
         h1.innerHTML = html;
 
         const jsLetters = document.querySelectorAll(".js-letter");
-        jsLetters.forEach(node => {                                             //arrow function  
+        jsLetters.forEach((node) => {                                             //arrow function  
             node.addEventListener('mouseover', function (event) {
                 this.classList.add("active");
             })
